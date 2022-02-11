@@ -1,0 +1,85 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .gallery img#largeImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 5vh;
+  width: 55vw;
+  height: 60vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: .2vw;
+}
+
+body .gallery ul {
+  width: 55vw;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .gallery ul li {
+  width: 24.5%;
+}
+
+body .gallery ul li a {
+  width: 100%;
+}
+
+body .gallery ul li a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: .2vw;
+  width: 100%;
+  height: 20vh;
+}
+
+@media screen and (max-width: 800px) {
+  body .gallery img#largeImg {
+    width: 80vw;
+  }
+  body .gallery ul {
+    width: 80vw;
+  }
+  body .gallery ul li {
+    width: 49%;
+  }
+}

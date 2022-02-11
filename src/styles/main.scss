@@ -1,0 +1,66 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  .gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img#largeImg{
+      object-fit: cover;
+      margin-top: 5vh;
+      width: 55vw;
+      height: 60vh;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: .2vw;
+    }
+    ul{
+      width: 55vw;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    
+      li{
+        width: 24.5%;
+        a{
+          width: 100%;
+          img{
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: .2vw;
+            width: 100%;
+            height: 20vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  body{
+    .gallery{
+      img#largeImg{
+        width: 80vw;
+
+      }
+      ul{
+        width: 80vw;
+        li{
+          width: 49%;
+        }
+      }
+    }
+  }
+}
